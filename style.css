@@ -1,0 +1,186 @@
+/* =============================
+   Variables
+   ============================= */
+:root {
+  --color-bg: #f5f0eb;
+  --color-card: #ffffff;
+  --color-accent: #c9a96e;
+  --color-text: #1a1a1a;
+  --color-muted: #888880;
+  --color-linkedin: #0077B5;
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+/* =============================
+   Reset & Base
+   ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =============================
+   Container
+   ============================= */
+.container {
+  width: 500px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+@media (max-width: 540px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* =============================
+   Card
+   ============================= */
+.card {
+  background-color: var(--color-card);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  animation: fadeUp 0.6s ease both;
+}
+
+.card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent), #e8c98a);
+}
+
+/* =============================
+   Profile Header
+   ============================= */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-accent), #e8c98a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0px 8px 24px rgba(201, 169, 110, 0.35);
+}
+
+.avatar-initials {
+  font-family: var(--font-display);
+  font-size: 26px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.school {
+  font-size: 14px;
+  color: var(--color-muted);
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+/* =============================
+   Divider
+   ============================= */
+.divider {
+  height: 1px;
+  background-color: #f0ece6;
+  margin-bottom: 24px;
+}
+
+/* =============================
+   Bio
+   ============================= */
+.bio {
+  font-size: 15px;
+  color: #555550;
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+
+/* =============================
+   Links
+   ============================= */
+.list-inline {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.list-inline li {
+  display: inline;
+}
+
+.btn-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-linkedin);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 14px rgba(0, 119, 181, 0.3);
+}
+
+.btn-linkedin:hover {
+  background-color: #005f93;
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 20px rgba(0, 119, 181, 0.4);
+}
+
+/* =============================
+   Animation
+   ============================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
